@@ -20,4 +20,12 @@ public class Collections {
     public static HashMap<String,Staff> _teamMembers = new HashMap<>();// one collection for all team members
     public static HashMap<Integer,Double> _bestChoice = new HashMap<>();// one collection for all jobs
     
+    public static void cleanUp(){
+    
+        _allJobs.clear();
+        _staffToHire.clear();
+        _teamMembers.clear();
+        _bestChoice.clear();
+    
+    }
 }

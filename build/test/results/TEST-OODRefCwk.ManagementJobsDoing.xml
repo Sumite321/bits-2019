@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="8" failures="5" hostname="END-ECO-WPC-072" name="OODRefCwk.ManagementJobsDoing" skipped="0" tests="18" time="0.101" timestamp="2019-06-18T14:08:20">
+<testsuite errors="0" failures="2" hostname="END-ECO-WPC-072" name="OODRefCwk.ManagementJobsDoing" skipped="0" tests="18" time="0.797" timestamp="2019-06-19T08:26:02">
   <properties>
     <property name="netbeans.autoupdate.country" value="GB" />
     <property name="nb.wait.for.caches" value="true" />
     <property name="javac.test.classpath" value="C:\Users\sramchande\Desktop\Bits-master\lib\hamcrest-core-1.3.jar:C:\Users\sramchande\Desktop\Bits-master\lib\junit-4.12.jar:build/classes" />
     <property name="ant.core.lib" value="C:\Program Files\NetBeans 8.2\extide\ant\lib\ant.jar" />
     <property name="javadoc.windowtitle" value="" />
-    <property name="user.dir" value="C:\Users\sramchande\Desktop\ood\bits-studentsnb" />
+    <property name="user.dir" value="M:\githubnew\bits-2019" />
     <property name="java.vm.version" value="25.111-b14" />
     <property name="libs.MySQLDriver.classpath" value="C:\Program Files\NetBeans 8.2\ide\modules\ext\mysql-connector-java-5.1.23-bin.jar" />
     <property name="libs.eclipselinkmodelgen.src" value="" />
@@ -39,7 +39,7 @@
     <property name="user.name" value="sramchande" />
     <property name="copylibs.rebase" value="true" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner OODRefCwk.ManagementJobsDoing skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\sramchande\Desktop\ood\bits-studentsnb\build\test\results\TEST-OODRefCwk.ManagementJobsDoing.xml crashfile=C:\Users\sramchande\Desktop\ood\bits-studentsnb\build\junitvmwatcher2321359058762055855.properties propsfile=C:\Users\sramchande\Desktop\ood\bits-studentsnb\build\junit6012171270090595588.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner OODRefCwk.ManagementJobsDoing skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,M:\githubnew\bits-2019\build\test\results\TEST-OODRefCwk.ManagementJobsDoing.xml crashfile=M:\githubnew\bits-2019\build\junitvmwatcher4123555965495057158.properties propsfile=M:\githubnew\bits-2019\build\junit1696512209613058222.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -57,7 +57,6 @@
     <property name="debug-transport" value="dt_shmem" />
     <property name="netbeans.home" value="C:\Program Files\NetBeans 8.2\platform" />
     <property name="build.compiler.emacs" value="true" />
-    <property name="nu.validator.checker.imageCandidateString.hasWidth" value="0" />
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_111\jre\lib\endorsed" />
     <property name="netbeans.dynamic.classpath" value="C:\Program Files\NetBeans 8.2\platform\core\asm-all-5.0.1.jar;C:\Program Files\NetBeans 8.2\platform\core\core-base.jar;C:\Program Files\NetBeans 8.2\platform\core\core.jar;C:\Program Files\NetBeans 8.2\platform\core\org-netbeans-libs-asm.jar;C:\Program Files\NetBeans 8.2\platform\core\org-openide-filesystems-compat8.jar;C:\Program Files\NetBeans 8.2\platform\core\org-openide-filesystems.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core-base_ja.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core-base_pt_BR.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core-base_ru.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core-base_zh_CN.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core_ja.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core_pt_BR.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core_ru.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\core_zh_CN.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-netbeans-libs-asm_ja.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-netbeans-libs-asm_pt_BR.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-netbeans-libs-asm_ru.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-netbeans-libs-asm_zh_CN.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems-compat8_ja.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems-compat8_pt_BR.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems-compat8_ru.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems-compat8_zh_CN.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems_ja.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems_pt_BR.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems_ru.jar;C:\Program Files\NetBeans 8.2\platform\core\locale\org-openide-filesystems_zh_CN.jar;C:\Program Files\NetBeans 8.2\nb\core\org-netbeans-upgrader.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\core_nb.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\core_nb_ja.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\core_nb_pt_BR.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\core_nb_ru.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\core_nb_zh_CN.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\org-netbeans-upgrader_ja.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\org-netbeans-upgrader_pt_BR.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\org-netbeans-upgrader_ru.jar;C:\Program Files\NetBeans 8.2\nb\core\locale\org-netbeans-upgrader_zh_CN.jar" />
     <property name="java.vm.specification.version" value="1.8" />
@@ -95,7 +94,7 @@
     <property name="libs.spring-framework400.src" value="" />
     <property name="libs.PostgreSQLDriver.src" value="" />
     <property name="sun.arch.data.model" value="64" />
-    <property name="basedir" value="C:\Users\sramchande\Desktop\ood\bits-studentsnb" />
+    <property name="basedir" value="M:\githubnew\bits-2019" />
     <property name="libs.jpa20-persistence.maven-pom" value="" />
     <property name="jar.compress" value="false" />
     <property name="path.separator" value=";" />
@@ -131,8 +130,8 @@
     <property name="libs.JAXB-ENDORSED.javadoc" value="" />
     <property name="libs.JWSAntTasks.classpath" value="C:\Program Files\NetBeans 8.2\java\ant\extra\org-netbeans-modules-javawebstart-anttasks.jar" />
     <property name="libs.spring-framework300.src" value="" />
-    <property name="empty.dir" value="C:\Users\sramchande\Desktop\ood\bits-studentsnb\build\empty" />
-    <property name="ant.file.bits-studentsnb-impl" value="C:\Users\sramchande\Desktop\ood\bits-studentsnb\nbproject\build-impl.xml" />
+    <property name="empty.dir" value="M:\githubnew\bits-2019\build\empty" />
+    <property name="ant.file.bits-studentsnb-impl" value="M:\githubnew\bits-2019\nbproject\build-impl.xml" />
     <property name="version-output" value="java version &quot;1.8" />
     <property name="test.binarytestincludes" value="" />
     <property name="libs.hibernate4-persistencemodelgen.src" value="" />
@@ -163,7 +162,7 @@
     <property name="javac.processorpath" value="C:\Users\sramchande\Desktop\Bits-master\lib\hamcrest-core-1.3.jar:C:\Users\sramchande\Desktop\Bits-master\lib\junit-4.12.jar" />
     <property name="libs.hamcrest.maven-pom" value="" />
     <property name="javac.compilerargs" value="" />
-    <property name="ant.file" value="C:\Users\sramchande\Desktop\ood\bits-studentsnb\build.xml" />
+    <property name="ant.file" value="M:\githubnew\bits-2019\build.xml" />
     <property name="libs.beans-binding.maven-pom" value="" />
     <property name="libs.hibernate4-support.javadoc" value="C:\Program Files\NetBeans 8.2\java\modules\ext\docs\javax.persistence-2.1.0-doc.zip" />
     <property name="libs.beans-binding.src" value="" />
@@ -191,7 +190,7 @@
     <property name="javadoc.encoding.used" value="UTF-8" />
     <property name="dist.jar" value="dist/bits-studentsnb.jar" />
     <property name="libs.spring-framework400.maven-pom" value="" />
-    <property name="ant.file.bits-studentsnb" value="C:\Users\sramchande\Desktop\ood\bits-studentsnb\build.xml" />
+    <property name="ant.file.bits-studentsnb" value="M:\githubnew\bits-2019\build.xml" />
     <property name="netbeans.automatic.build" value="true" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="ant.project.name" value="bits-studentsnb" />
@@ -231,7 +230,7 @@
     <property name="jdk.launcher.addexports.5" value="java.management/sun.management=ALL-UNNAMED" />
     <property name="jdk.launcher.addexports.4" value="java.desktop/com.sun.java.swing.plaf.windows=ALL-UNNAMED" />
     <property name="jdk.launcher.addexports.3" value="java.desktop/sun.awt.im=ALL-UNNAMED" />
-    <property name="work.dir" value="C:\Users\sramchande\Desktop\ood\bits-studentsnb" />
+    <property name="work.dir" value="M:\githubnew\bits-2019" />
     <property name="jdk.launcher.addexports.2" value="java.desktop/java.awt.peer=ALL-UNNAMED" />
     <property name="libs.jaxb.classpath" value="C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\jaxb-impl.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\jaxb-xjc.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\jaxb1-impl.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\activation.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\api\jaxb-api.jar;C:\Program Files\NetBeans 8.2\ide\modules\ext\jaxb\api\jsr173_1.0_api.jar" />
     <property name="jdk.launcher.addexports.1" value="java.base/jdk.internal.jrtfs=ALL-UNNAMED" />
@@ -251,7 +250,7 @@
     <property name="file.reference.hamcrest-core-1.3.jar" value="C:\Users\sramchande\Desktop\Bits-master\lib\hamcrest-core-1.3.jar" />
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_111\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_111\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_111\jre\classes" />
     <property name="javac.target" value="1.7" />
-    <property name="built-jar.properties" value="C:\Users\sramchande\Desktop\ood\bits-studentsnb\build\built-jar.properties" />
+    <property name="built-jar.properties" value="M:\githubnew\bits-2019\build\built-jar.properties" />
     <property name="build.test.classes.dir" value="build/test/classes" />
     <property name="src.dir" value="src" />
     <property name="annotation.processing.enabled" value="true" />
@@ -282,15 +281,15 @@
     <property name="libs.absolutelayout.classpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\AbsoluteLayout.jar" />
     <property name="excludes" value="" />
     <property name="libs.jpa2-persistence.javadoc" value="C:\Program Files\NetBeans 8.2\java\modules\ext\docs\javax.persistence-2.1.0-doc.zip" />
-    <property name="java.class.path" value="C:\Users\sramchande\Desktop\Bits-master\lib\hamcrest-core-1.3.jar;C:\Users\sramchande\Desktop\Bits-master\lib\junit-4.12.jar;C:\Users\sramchande\Desktop\ood\bits-studentsnb\build\classes;C:\Users\sramchande\Desktop\ood\bits-studentsnb\build\test\classes;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant-launcher.jar;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant-junit.jar;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant-junit4.jar" />
+    <property name="java.class.path" value="C:\Users\sramchande\Desktop\Bits-master\lib\hamcrest-core-1.3.jar;C:\Users\sramchande\Desktop\Bits-master\lib\junit-4.12.jar;M:\githubnew\bits-2019\build\classes;M:\githubnew\bits-2019\build\test\classes;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant-launcher.jar;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant-junit.jar;C:\Program Files\NetBeans 8.2\extide\ant\lib\ant-junit4.jar" />
     <property name="apple.laf.useScreenMenuBar" value="true" />
     <property name="do.mkdist" value="true" />
     <property name="libs.absolutelayout.src" value="" />
     <property name="libs.jpa20-persistence.classpath" value="C:\Program Files\NetBeans 8.2\java\modules\ext\eclipselink\javax.persistence_2.1.0.v201304241213.jar" />
     <property name="os.version" value="10.0" />
     <property name="application.args" value="" />
-    <property name="main.class.available" value="true" />
     <property name="sun.awt.enableExtraMouseButtons" value="true" />
+    <property name="main.class.available" value="true" />
     <property name="sun.desktop" value="windows" />
     <property name="libs.hibernate4-persistence.src" value="" />
     <property name="libs.hibernate4-support.maven-pom" value="" />
@@ -318,90 +317,38 @@
     <property name="ant.version" value="Apache Ant(TM) version 1.9.7 compiled on April 9 2016" />
     <property name="file.encoding" value="Cp1252" />
     <property name="build.classes.excludes" value="**/*.java,**/*.form" />
-    <property name="javadoc.nonavbar" value="false" />
     <property name="jdkBug6558476" value="false" />
+    <property name="javadoc.nonavbar" value="false" />
     <property name="platform.active" value="default_platform" />
     <property name="https.proxyHost" value="end-bluecoat" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
   </properties>
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="doingJobsInTeam1" time="0.011" />
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="doingJobsInTeam2" time="0.001" />
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="onHoliday" time="0.004">
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="doingJobsInTeam1" time="0.015" />
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="doingJobsInTeam2" time="0.0" />
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="onHoliday" time="0.0">
     <failure type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError
 	at OODRefCwk.ManagementJobsDoing.onHoliday(ManagementJobsDoing.java:275)
 </failure>
   </testcase>
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="programmerDoingDesignNoExperience" time="0.001" />
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="analystDoingDesignWithProgWithExp" time="0.001">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at OODRefCwk.Helper.ITManager.doJob(ITManager.java:427)
-	at OODRefCwk.ManagementJobsDoing.analystDoingDesignWithProgWithExp(ManagementJobsDoing.java:229)
-</error>
-  </testcase>
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="programmerDoingHardware" time="0.002">
-    <failure type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError
-	at OODRefCwk.ManagementJobsDoing.programmerDoingHardware(ManagementJobsDoing.java:114)
-</failure>
-  </testcase>
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="programmerDoingDesignNoExperience" time="0.0" />
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="analystDoingDesignWithProgWithExp" time="0.0" />
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="programmerDoingHardware" time="0.0" />
   <testcase classname="OODRefCwk.ManagementJobsDoing" name="technicianDoingHardwareNoExperience" time="0.0" />
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="analystDoingSoftwareWithProgNoExp" time="0.0" />
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="analystDoingSoftwareNoProg" time="0.001">
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="analystDoingSoftwareWithProgNoExp" time="0.016" />
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="analystDoingSoftwareNoProg" time="0.0" />
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="technicianDoingSoftware" time="0.0" />
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="gettingOverdrawn" time="0.0">
     <failure type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError
-	at OODRefCwk.ManagementJobsDoing.analystDoingSoftwareNoProg(ManagementJobsDoing.java:186)
+	at OODRefCwk.ManagementJobsDoing.gettingOverdrawn(ManagementJobsDoing.java:289)
 </failure>
   </testcase>
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="technicianDoingSoftware" time="0.001">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at OODRefCwk.Helper.ITManager.doJob(ITManager.java:427)
-	at OODRefCwk.ManagementJobsDoing.technicianDoingSoftware(ManagementJobsDoing.java:62)
-</error>
-  </testcase>
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="gettingOverdrawn" time="0.001">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at OODRefCwk.Helper.ITManager.doJob(ITManager.java:427)
-	at OODRefCwk.ManagementJobsDoing.gettingOverdrawn(ManagementJobsDoing.java:285)
-</error>
-  </testcase>
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="analystDoingHardware" time="0.001">
-    <failure type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError
-	at OODRefCwk.ManagementJobsDoing.analystDoingHardware(ManagementJobsDoing.java:174)
-</failure>
-  </testcase>
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="technicianDoingDesign" time="0.001">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at OODRefCwk.Helper.ITManager.doJob(ITManager.java:427)
-	at OODRefCwk.ManagementJobsDoing.technicianDoingDesign(ManagementJobsDoing.java:74)
-</error>
-  </testcase>
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="technicianDoingHwareWithExperience" time="0.002">
-    <failure type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError
-	at OODRefCwk.ManagementJobsDoing.technicianDoingHwareWithExperience(ManagementJobsDoing.java:102)
-</failure>
-  </testcase>
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="programmerDoingSoftwareNoExperience" time="0.001">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at OODRefCwk.Helper.ITManager.doJob(ITManager.java:427)
-	at OODRefCwk.ManagementJobsDoing.programmerDoingSoftwareNoExperience(ManagementJobsDoing.java:122)
-</error>
-  </testcase>
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="programmerDoingSoftwareWithExp" time="0.001">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at OODRefCwk.Helper.ITManager.doJob(ITManager.java:427)
-	at OODRefCwk.ManagementJobsDoing.programmerDoingSoftwareWithExp(ManagementJobsDoing.java:134)
-</error>
-  </testcase>
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="analystDoingDesignWithProgNoExp" time="0.001">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at OODRefCwk.Helper.ITManager.doJob(ITManager.java:427)
-	at OODRefCwk.ManagementJobsDoing.analystDoingDesignWithProgNoExp(ManagementJobsDoing.java:217)
-</error>
-  </testcase>
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="programmerDoingDesignWithExp" time="0.001">
-    <error type="java.lang.NullPointerException">java.lang.NullPointerException
-	at OODRefCwk.Helper.ITManager.doJob(ITManager.java:427)
-	at OODRefCwk.ManagementJobsDoing.programmerDoingDesignWithExp(ManagementJobsDoing.java:158)
-</error>
-  </testcase>
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="analystDoingHardware" time="0.0" />
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="technicianDoingDesign" time="0.0" />
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="technicianDoingHwareWithExperience" time="0.0" />
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="programmerDoingSoftwareNoExperience" time="0.0" />
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="programmerDoingSoftwareWithExp" time="0.0" />
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="analystDoingDesignWithProgNoExp" time="0.0" />
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="programmerDoingDesignWithExp" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

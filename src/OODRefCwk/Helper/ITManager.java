@@ -2,6 +2,7 @@ package OODRefCwk.Helper;
 import OODRefCwk.Helper.Loader;
 import OODRefCwk.Enum.JobType;
 import OODRefCwk.Enum.StaffState;
+import OODRefCwk.Logic.JobLogic;
 import OODRefCwk.Management;
 import OODRefCwk.Model.Analyst;
 import OODRefCwk.Model.Programmer;
@@ -14,7 +15,7 @@ import static OODRefCwk.Repository.Collections._allJobs;
 import static OODRefCwk.Repository.Collections._staffToHire;
 import static OODRefCwk.Repository.Collections._bestChoice;
 import static OODRefCwk.Repository.Collections._teamMembers;
-
+import static OODRefCwk.Repository.Collections.cleanUp;
 /**
  * This class implements the behaviour expected from the BITS system
  * as required for 6COM1037 Referred Cwk - June 2019 and 
@@ -31,8 +32,9 @@ public class ITManager  implements Management
 {
 // Declare fields
     private String _managerName;
-    private double _budget;
+    public static double _budget;
     private Loader loader;
+    private JobLogic _jobLogic;
 
 
 //**************** BITS ************************** 
@@ -45,10 +47,11 @@ public class ITManager  implements Management
      {
         this._managerName = trainee;
         this._budget = _budget;
+        this._jobLogic = new JobLogic();
+        cleanUp();
         loader = new Loader();
         setupTasks();
         setupStaff();
-        
         
      }
     
@@ -103,14 +106,7 @@ public class ITManager  implements Management
      **/
     public boolean isJob(int num) {
 
-        boolean found = false;
-
-        for (Job j : _allJobs.values()) {
-            if (j.getNumber() == num) {
-                found = true;
-            }
-        }
-        return found;
+        return _jobLogic.jobExists(num);
     }
 
     
@@ -119,39 +115,11 @@ public class ITManager  implements Management
      **/
     public String getAllJobs() {
 
-        StringBuilder jobDetails = new StringBuilder();
-
-        for (Job j : _allJobs.values()) {
-            {
-                jobDetails.append("Job number: " + j.getNumber() + " "
-                        + "Job type: " + j.getType() + " "
-                        + "Job difficulty: " + j.getLevel() + " "
-                        + "Penalty: " + j.getPenalty() + " "
-                        + "Hours to complete: " + j.getHours() + "\n"
-                );
-            }
-        }
-        return jobDetails.toString();
+        return _jobLogic.getAllJobs();
     }
        
     public Job getJobReference(int jobNo) {
-
-        Job found = null;
-
-        if (isJob(jobNo)) {
-
-            for (Job job : _allJobs.values()) {
-
-                if (job.getNumber() == jobNo) {
-
-                    found = job;
-                }
-            }
-
-        }
-
-        return found;
-
+        return _jobLogic.getJobReference(jobNo);
     }
     
     
@@ -338,106 +306,7 @@ public class ITManager  implements Management
      */
     public String doJob(int jbNo) {
 
-        Double toDeduct = 0.0;
-        String message = "";
-        Staff toRemove = null;
-        // go through the membersOfTeam 
-        // get their especialisation
-        // check if it complies with the job type
-        //display message
-        // update account
-        _bestChoice.clear();
-        if (isJob(jbNo)) {
-            Job jobRef = getJobReference(jbNo);
-            JobType type = jobRef.getType(); // Get the job reference, EX: Software
-            for (Staff staff : _teamMembers.values()) { // Go through the collection
-                if(staff.getState() != StaffState.ONHOLIDAY){
-                if (type == JobType.SOFTWARE || type == JobType.DESIGN) { // if the type is Software, Programmer can do it and Analyst can do it if True.
-
-                    if (staff instanceof Programmer) { // if a programmer exists
-                        if (jobRef.getLevel() >= staff.getExperience()) {
-                            message = "not completed due to staff inexperience";
-                            toDeduct = jobRef.getPenalty() * -1.0;
-                            _bestChoice.put(2,toDeduct);
-                        } else {
-                            message = "Job completed by" + staff.getUName(); // job completed
-                            toDeduct = staff.getRate() * jobRef.getHours();
-                            _bestChoice.put(1,toDeduct);
-                            //_teamMembers.remove(staff.getUName());
-                        }
-                    }
-                    if (staff instanceof Analyst) { // if a Analyst exists
-                        
-                         if (jobRef.getLevel() >= staff.getExperience()) {
-                            message = "not completed due to staff inexperience";
-                            toDeduct = jobRef.getPenalty() * -1.0;
-                            _bestChoice.put(2,toDeduct);
-                        }else{
-                        
-                        if (((Analyst) staff).isProgrammer() && type == JobType.SOFTWARE) { // if the Analyst can program
-                            message = "Job completed by" + staff.getUName(); // job done if software + can program
-                            toDeduct = staff.getRate() * jobRef.getHours();
-                            _bestChoice.put(1,toDeduct);
-                            //_teamMembers.remove(staff.getUName());
-                        } else {
-                            message = "Job completed by" + staff.getUName(); // job done for design
-                            toDeduct = staff.getRate() * jobRef.getHours();
-                            _bestChoice.put(1,toDeduct);
-                        }
-                    }
-                    }
-                    if (staff instanceof Technician) {
-                        message = "No staff available";
-                        toDeduct = jobRef.getPenalty() * -1.0 ;
-                        _bestChoice.put(3,toDeduct);
-                    }
-
-                } else if (type == JobType.HARDWARE && staff instanceof Technician) {
-                     if (jobRef.getLevel() >= staff.getExperience()) {
-                            message = "not completed due to staff inexperience";
-                            toDeduct = jobRef.getPenalty() * -1.0;
-                            _bestChoice.put(2,toDeduct);
-                    }else{
-                    message = "Job completed by" + staff.getUName();
-                    toDeduct += staff.getRate() * jobRef.getHours();
-                    _bestChoice.put(1,toDeduct);
-                    toRemove = staff;
-                     }
-                } else  {
-                    message = "No staff available";
-                    toDeduct = jobRef.getPenalty() * -1.0;
-                    _bestChoice.put(3,toDeduct);
-                }
-            }else{
-                 message = "No staff available";
-                    toDeduct = jobRef.getPenalty() * -1.0;
-                    _bestChoice.put(3,toDeduct);
-                
-                }
-            }
-
-        } else {
-            message = "No such Job";
-        }
-        
-        
-        if(_teamMembers.size() > 1){
-            if(_bestChoice.containsKey(1)){
-            _budget = _budget + _bestChoice.get(1);
-            _teamMembers.remove(toRemove.getUName());
-            toRemove.setState(StaffState.ONHOLIDAY);
-            message = "Job Completed by" + toRemove.getUName();
-            } else if(_bestChoice.containsKey(2) ){
-            _budget = _budget + _bestChoice.get(2);
-            message = "not completed due to staff inexperience";
-            }else if(_bestChoice.containsKey(3)){
-            _budget = _budget + _bestChoice.get(3);
-            message = "not completed due to staff inexperience";
-            }
-
-        }else{
-        _budget = _budget + toDeduct;}
-        return message;
+        return _jobLogic.completeJob(jbNo);
     }
 
   
