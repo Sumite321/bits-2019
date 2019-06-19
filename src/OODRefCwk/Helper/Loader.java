@@ -18,7 +18,7 @@ import static OODRefCwk.Repository.Collections._staffToHire;
 
 /**
  *
- * @author sramchande
+ * @author 
  */
 public class Loader {
     
@@ -29,7 +29,7 @@ public class Loader {
         _staffToHire.put("Alan", new Analyst("Alan", 2, 300, 30, false));
         _staffToHire.put("Bob", new Technician("Bob", 2, 100, 30, false));
         _staffToHire.put("Ceri", new Technician("Ceri", 4, 250, 40, true));
-        _staffToHire.put("Dan", new Programmer("Dan", 2, 300, 20));
+        _staffToHire.put("Dan", new Programmer("Dan", 2, 200, 20));
         _staffToHire.put("Ela", new Programmer("Ela", 7, 200, 20));
         _staffToHire.put("Fela", new Analyst("Fela", 6, 300, 90, false));
         _staffToHire.put("Gita", new Programmer("Gita", 2, 200, 20));

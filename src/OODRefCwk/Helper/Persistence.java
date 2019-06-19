@@ -3,12 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package OODRefCwk.Logic;
+package OODRefCwk.Helper;
 
 /**
  *
  * @author 
  */
-public class StaffLogic {
+public class Persistence {
+    
+    public void exportToFile(){}
+    
+    public void importFromFile(){}
     
 }

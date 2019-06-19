@@ -19,7 +19,7 @@ import static OODRefCwk.Helper.ITManager._budget;
 
 /**
  *
- * @author sramchande
+ * @author 
  */
 public class JobLogic {
 
@@ -78,6 +78,7 @@ public class JobLogic {
 
     public String completeJob(int jobNo) {
 
+        bill = 0.0;
         _bestChoice.clear();
         if (jobExists(jobNo)) {
             // Get the job reference
@@ -154,6 +155,7 @@ public class JobLogic {
                             bill += staff.getRate() * jobRef.getHours();
                             _bestChoice.put(1, bill);
                             removeStaff = staff;
+                            staff.setState(StaffState.ONHOLIDAY);
                         }
                     } // for any other cases
                     else {
@@ -172,6 +174,8 @@ public class JobLogic {
         }
         
         pickBestChoice();
+                        System.out.println(_teamMembers);
+
 
         return message;
     }

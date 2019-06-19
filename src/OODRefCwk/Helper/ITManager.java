@@ -94,7 +94,7 @@ public class ITManager  implements Management
      */
     public boolean isOverdrawn(){
         
-        if(getAccount()<=0 && _teamMembers.isEmpty()){return true;}
+        if(getAccount()<=0 ){return true;}
         
         return false;
     }
@@ -306,7 +306,7 @@ public class ITManager  implements Management
      */
     public String doJob(int jbNo) {
 
-        return _jobLogic.completeJob(jbNo);
+        return _jobLogic.completeJob(jbNo)+ toString();
     }
 
   
