@@ -168,14 +168,13 @@ public class JobLogic {
                     bill = jobRef.getPenalty() * -1.0;
                     _bestChoice.put(3, bill);
                 }
+                removeStaff = staff;
             }
         } else {
             message = "No such Job";
         }
         
         pickBestChoice();
-                        System.out.println(_teamMembers);
-
 
         return message;
     }

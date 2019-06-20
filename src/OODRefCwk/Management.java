@@ -120,6 +120,14 @@ public interface Management
      */
     public String staffRejoinTeam(String name);
     
+    
+    
+    /* DEMO WORK */
+    public int getPenalty(int jobNo);
+    
+    public String getExperiencedStaff(int requiredLevel);
+    
+    public String getTrainee();
  
 }
    

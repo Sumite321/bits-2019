@@ -8,6 +8,7 @@ package OODRefCwk.Helper;
 import OODRefCwk.Enum.JobType;
 import OODRefCwk.Enum.StaffState;
 import OODRefCwk.Model.Analyst;
+import OODRefCwk.Model.Designer;
 import OODRefCwk.Model.Programmer;
 import OODRefCwk.Model.Technician;
 import OODRefCwk.Model.Staff;
@@ -34,12 +35,15 @@ public class Loader {
         _staffToHire.put("Gita", new Programmer("Gita", 2, 200, 20));
         _staffToHire.put("Hela", new Technician("Hela", 8, 450, 40, false));
         _staffToHire.put("Ian", new Analyst("Ian", 4, 300, 60, false));
+        
+        
         /* Demo Work */ 
-        _staffToHire.put("Mary", new Analyst("Mary",5, 300, 75, true));
+        
+        _staffToHire.put("Mary", new Analyst("Mary", 5, 300, 75, true));
+        _staffToHire.put("Arty", new Designer("Arty", 7, 150, 30, true));
 
         for (Staff makeAvailable : _staffToHire.values()) {
             makeAvailable.setState(StaffState.AVAILABLE);
-
         }
 
     }
