@@ -169,16 +169,7 @@ public class ITManager  implements Management
     
     private Staff getStaffReference(String name) {
 
-        Staff toReturn = null;
-        
-        if (staffExists(name)) {
-            for (Staff s : _staffToHire.values()) {
-                if (s.getUName().equals(name)) {
-                    toReturn = s;
-                }
-            }
-        }
-        return toReturn;
+        return getReference(name, _staffToHire);
     }
     
        /**Returns a String representation of all staff available for hire
@@ -225,7 +216,6 @@ public class ITManager  implements Management
                 _teamMembers.put(toHire.getUName(), toHire);
                 message = toHire.getUName() + "has been hired for " + toHire.getRetainer() + "\n" + "Current account balance: " + getAccount();
                 _staffToHire.remove(toHire.getUName());
-                //_staffToHire.r
             }else{
             message = "Not enough money";
             }
@@ -245,8 +235,8 @@ public class ITManager  implements Management
       
         boolean found = false;
         
-        for (Staff s : _teamMembers.values()) {
-            if (s.getUName().equals(name)) {
+        for (Staff staff : _teamMembers.values()) {
+            if (staff.getUName().equals(name)) {
                 found = true;
             } 
         }
@@ -255,16 +245,7 @@ public class ITManager  implements Management
 
     private Staff getStaffTeamReference(String name) {
 
-        Staff toReturn = null;
-        
-        if (isInTeam(name)) {
-            for (Staff s : _teamMembers.values()) {
-                if (s.getUName().equals(name)) {
-                    toReturn = s;
-                }
-            }
-        }
-        return toReturn;
+        return getReference(name, _teamMembers);
     }
     /**Returns a String representation of the staff in the project team
      * (including those on holiday), or the message "No staff hired"
@@ -272,21 +253,21 @@ public class ITManager  implements Management
      **/
     public String getTeam() {
 
-        StringBuilder showTeam = new StringBuilder();
+        StringBuilder projectTeam = new StringBuilder();
 
         if (_teamMembers.isEmpty()) {
-            showTeam.append("No staff hired");
+            projectTeam.append("No staff hired");
         } else {
 
             for (Staff s : _teamMembers.values()) {
-                showTeam.append("Staff name: " + s.getUName() + " "
+                projectTeam.append("Staff name: " + s.getUName() + " "
                         + "Experience level: " + s.getExperience() + " "
                         + "Retainer: " + s.getRetainer() + " "
                         + "Hourly rate: " + s.getRate() + " "
                         + "State: " + s.getState().toString() + "\n");
             }
         }
-        return showTeam.toString();
+        return projectTeam.toString();
     }
 
 // ***************** Simulation ************************ 
@@ -318,7 +299,7 @@ public class ITManager  implements Management
         String message = "";
         if(isInTeam(name)){
           getStaffTeamReference(name).setState(StaffState.WORKING);
-          message = "Status changed to Working";
+          message = "Staff back from Holiday";
        }else{
           message = "Staff does not exist";
         
@@ -341,5 +322,27 @@ public class ITManager  implements Management
 
     }
     
+    private Staff getReference(String name, HashMap<String,Staff> collection){
+
+        Staff reference = null;
+
+        
+        if (isInTeam(name) || staffExists(name)) {
+            for (Staff staff : collection.values()) {
+                if (staff.getUName().equals(name)) {
+                    reference = staff;
+                }
+            }
+        }
+        return reference;
+}
+    
+    /* DEMO WORK 
+    public String getTrainee(){}
+    
+    public int getPenalty(){}
+    
+    public String getExperiencedStaff(){}
+    */
 
 }

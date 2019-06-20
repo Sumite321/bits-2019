@@ -72,7 +72,10 @@ public class ManagerUI
                     {
                         System.out.println(_management.staffRejoinTeam(nme));
                     }  
-                }
+                } /* DEMO WORK
+                else if (choice == 8)
+                    System.out.println(_management.toString());
+                { */
 
             }     
         }
@@ -92,7 +95,9 @@ public class ManagerUI
         System.out.println("5. list jobs ");
         System.out.println("6. do a job");
         System.out.println("7. staff rejoin team from holiday");
-        
+        /* DEMO WORK
+        System.out.println("8. project state");
+        */
         while (choice < 0 || choice  > 7)
         {
             System.out.println("Enter the number of your choice");
