@@ -13,7 +13,7 @@ import OODRefCwk.Model.Programmer;
 import OODRefCwk.Model.Staff;
 import OODRefCwk.Model.Technician;
 import static OODRefCwk.Repository.Collections._allJobs;
-import static OODRefCwk.Repository.Collections._bestChoice;
+import static OODRefCwk.Repository.Collections. _qualifiedStaff;
 import static OODRefCwk.Repository.Collections._teamMembers;
 import static OODRefCwk.Helper.ITManager._budget;
 
@@ -62,24 +62,19 @@ public class JobLogic {
         Job found = null;
 
         if (jobExists(jobNo)) {
-
             for (Job job : _allJobs.values()) {
-
                 if (job.getNumber() == jobNo) {
-
                     found = job;
                 }
             }
-
         }
-
         return found;
     }
 
     public String completeJob(int jobNo) {
 
         bill = 0.0;
-        _bestChoice.clear();
+         _qualifiedStaff.clear();
         if (jobExists(jobNo)) {
             // Get the job reference
             Job jobRef = getJobReference(jobNo);
@@ -102,37 +97,37 @@ public class JobLogic {
                                 bill = jobRef.getPenalty() * -1.0;
 
                                 // add into the collection
-                                _bestChoice.put(2, bill);
+                                 _qualifiedStaff.put(2, bill);
                             } else {
                                 message = "Job completed by" + staff.getUName(); // job completed
 
                                 // add the reward
                                 bill = staff.getRate() * jobRef.getHours();
-                                _bestChoice.put(1, bill);
+                                 _qualifiedStaff.put(1, bill);
                             }
                         }
 
                         // We check if a Analyst exists
                         // test their level of experience
-                        // and eligibility of the job type
+                        // and eligibility for the job type
                         if (staff instanceof Analyst) {
 
                             if (jobRef.getLevel() >= staff.getExperience()) {
                                 message = "not completed due to staff inexperience";
                                 bill = jobRef.getPenalty() * -1.0;
-                                _bestChoice.put(2, bill);
+                                 _qualifiedStaff.put(2, bill);
                             } else {
 
                                 // if the Analyst can program and job type is Software
                                 if (((Analyst) staff).isProgrammer() && type == JobType.SOFTWARE) {
                                     message = "Job completed by" + staff.getUName();
                                     bill = staff.getRate() * jobRef.getHours();
-                                    _bestChoice.put(1, bill);
+                                     _qualifiedStaff.put(1, bill);
 
                                 } else {
                                     message = "Job completed by" + staff.getUName();
                                     bill = staff.getRate() * jobRef.getHours();
-                                    _bestChoice.put(1, bill);
+                                     _qualifiedStaff.put(1, bill);
                                 }
                             }
                         }
@@ -141,7 +136,7 @@ public class JobLogic {
                         if (staff instanceof Technician) {
                             message = "No staff available";
                             bill = jobRef.getPenalty() * -1.0;
-                            _bestChoice.put(3, bill);
+                             _qualifiedStaff.put(3, bill);
                         }
 
                     } // jobtype is hardware, only Technician can do
@@ -149,11 +144,11 @@ public class JobLogic {
                         if (jobRef.getLevel() >= staff.getExperience()) {
                             message = "not completed due to staff inexperience";
                             bill = jobRef.getPenalty() * -1.0;
-                            _bestChoice.put(2, bill);
+                             _qualifiedStaff.put(2, bill);
                         } else {
                             message = "Job completed by" + staff.getUName();
                             bill += staff.getRate() * jobRef.getHours();
-                            _bestChoice.put(1, bill);
+                             _qualifiedStaff.put(1, bill);
                             removeStaff = staff;
                             staff.setState(StaffState.ONHOLIDAY);
                         }
@@ -161,12 +156,12 @@ public class JobLogic {
                     else {
                         message = "No staff available";
                         bill = jobRef.getPenalty() * -1.0;
-                        _bestChoice.put(3, bill);
+                         _qualifiedStaff.put(3, bill);
                     }
                 } else {
                     message = "No staff available";
                     bill = jobRef.getPenalty() * -1.0;
-                    _bestChoice.put(3, bill);
+                     _qualifiedStaff.put(3, bill);
                 }
                 removeStaff = staff;
             }
@@ -178,20 +173,23 @@ public class JobLogic {
 
         return message;
     }
-
+    
+   /* In order to pick the best choice out of multiples, this is necessary.
+      Otherwise, it will pick the first option and display it. 
+    */
     private void pickBestChoice() {
-        /* */
+        
         if (_teamMembers.size() > 1) {
-            if (_bestChoice.containsKey(1)) {
-                _budget = _budget + _bestChoice.get(1);
+            if ( _qualifiedStaff.containsKey(1)) {
+                _budget = _budget +  _qualifiedStaff.get(1);
                 _teamMembers.remove(removeStaff.getUName());
                 removeStaff.setState(StaffState.ONHOLIDAY);
                 message = "Job Completed by" + removeStaff.getUName();
-            } else if (_bestChoice.containsKey(2)) {
-                _budget = _budget + _bestChoice.get(2);
+            } else if ( _qualifiedStaff.containsKey(2)) {
+                _budget = _budget +  _qualifiedStaff.get(2);
                 message = "not completed due to staff inexperience";
-            } else if (_bestChoice.containsKey(3)) {
-                _budget = _budget + _bestChoice.get(3);
+            } else if ( _qualifiedStaff.containsKey(3)) {
+                _budget = _budget +  _qualifiedStaff.get(3);
                 message = "not completed due to staff inexperience";
             }
 

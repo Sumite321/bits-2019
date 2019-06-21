@@ -67,9 +67,4 @@ public class DemoRefDef {
     
     }
     
-    public void print(String message){
-        System.out.println(message);
-    }
-    
-    
 }

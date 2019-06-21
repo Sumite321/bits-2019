@@ -14,7 +14,7 @@ import java.util.*;
 import java.io.*;
 import static OODRefCwk.Repository.Collections._allJobs;
 import static OODRefCwk.Repository.Collections._staffToHire;
-import static OODRefCwk.Repository.Collections._bestChoice;
+import static OODRefCwk.Repository.Collections. _qualifiedStaff;
 import static OODRefCwk.Repository.Collections._teamMembers;
 import static OODRefCwk.Repository.Collections.cleanUp;
 

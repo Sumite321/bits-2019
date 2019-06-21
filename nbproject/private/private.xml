@@ -3,15 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/M:/githubnew/bits-2019/src/OODRefCwk/Enum/JobType.java</file>
-            <file>file:/M:/githubnew/bits-2019/src/OODRefCwk/Model/Analyst.java</file>
+            <file>file:/M:/githubnew/bits-2019/src/OODRefCwk/Helper/Loader.java</file>
             <file>file:/M:/githubnew/bits-2019/src/OODRefCwk/Logic/JobLogic.java</file>
-            <file>file:/M:/githubnew/bits-2019/src/OODRefCwk/ManagerUI.java</file>
-            <file>file:/M:/githubnew/bits-2019/src/OODRefCwk/Enum/StaffState.java</file>
             <file>file:/M:/githubnew/bits-2019/src/OODRefCwk/Helper/ITManager.java</file>
+            <file>file:/M:/githubnew/bits-2019/src/OODRefCwk/DemoRefDef.java</file>
+            <file>file:/M:/githubnew/bits-2019/src/OODRefCwk/Model/Designer.java</file>
             <file>file:/M:/githubnew/bits-2019/src/OODRefCwk/Management.java</file>
-            <file>file:/M:/githubnew/bits-2019/src/OODRefCwk/Repository/Collections.java</file>
-            <file>file:/M:/githubnew/bits-2019/src/OODRefCwk/ManagerGUI.java</file>
         </group>
     </open-files>
 </project-private>

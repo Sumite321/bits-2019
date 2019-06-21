@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="END-ECO-WPC-072" name="OODRefCwk.ManagementJobsDoing" skipped="0" tests="18" time="0.467" timestamp="2019-06-20T14:55:51">
+<testsuite errors="0" failures="0" hostname="END-ECO-WPC-072" name="OODRefCwk.ManagementJobsDoing" skipped="0" tests="18" time="0.222" timestamp="2019-06-21T07:59:06">
   <properties>
     <property name="netbeans.autoupdate.country" value="GB" />
     <property name="nb.wait.for.caches" value="true" />
@@ -39,7 +39,7 @@
     <property name="user.name" value="sramchande" />
     <property name="copylibs.rebase" value="true" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner OODRefCwk.ManagementJobsDoing skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,M:\githubnew\bits-2019\build\test\results\TEST-OODRefCwk.ManagementJobsDoing.xml crashfile=M:\githubnew\bits-2019\build\junitvmwatcher3231396034707228386.properties propsfile=M:\githubnew\bits-2019\build\junit6345171497511334298.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner OODRefCwk.ManagementJobsDoing skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,M:\githubnew\bits-2019\build\test\results\TEST-OODRefCwk.ManagementJobsDoing.xml crashfile=M:\githubnew\bits-2019\build\junitvmwatcher4678501693951757592.properties propsfile=M:\githubnew\bits-2019\build\junit2332691066054687673.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -190,7 +190,6 @@
     <property name="dist.jar" value="dist/bits-studentsnb.jar" />
     <property name="libs.spring-framework400.maven-pom" value="" />
     <property name="ant.file.bits-studentsnb" value="M:\githubnew\bits-2019\build.xml" />
-    <property name="netbeans.automatic.build" value="true" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="ant.project.name" value="bits-studentsnb" />
     <property name="netbeans.hash.code" value="unique=NBJDK_EXTIDE_JAVA_JDK02bed9c4b-b31f-485c-a515-e9b5fb5a536a_b9b22428-490a-4c08-9b9e-1ea009cade12" />
@@ -322,14 +321,14 @@
     <property name="https.proxyHost" value="end-bluecoat" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
   </properties>
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="doingJobsInTeam1" time="0.015" />
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="doingJobsInTeam1" time="0.013" />
   <testcase classname="OODRefCwk.ManagementJobsDoing" name="doingJobsInTeam2" time="0.001" />
   <testcase classname="OODRefCwk.ManagementJobsDoing" name="onHoliday" time="0.001" />
   <testcase classname="OODRefCwk.ManagementJobsDoing" name="programmerDoingDesignNoExperience" time="0.0" />
   <testcase classname="OODRefCwk.ManagementJobsDoing" name="analystDoingDesignWithProgWithExp" time="0.0" />
   <testcase classname="OODRefCwk.ManagementJobsDoing" name="programmerDoingHardware" time="0.0" />
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="technicianDoingHardwareNoExperience" time="0.001" />
-  <testcase classname="OODRefCwk.ManagementJobsDoing" name="analystDoingSoftwareWithProgNoExp" time="0.001" />
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="technicianDoingHardwareNoExperience" time="0.0" />
+  <testcase classname="OODRefCwk.ManagementJobsDoing" name="analystDoingSoftwareWithProgNoExp" time="0.0" />
   <testcase classname="OODRefCwk.ManagementJobsDoing" name="analystDoingSoftwareNoProg" time="0.0" />
   <testcase classname="OODRefCwk.ManagementJobsDoing" name="technicianDoingSoftware" time="0.0" />
   <testcase classname="OODRefCwk.ManagementJobsDoing" name="gettingOverdrawn" time="0.0" />
@@ -340,30 +339,6 @@
   <testcase classname="OODRefCwk.ManagementJobsDoing" name="programmerDoingSoftwareWithExp" time="0.001" />
   <testcase classname="OODRefCwk.ManagementJobsDoing" name="analystDoingDesignWithProgNoExp" time="0.0" />
   <testcase classname="OODRefCwk.ManagementJobsDoing" name="programmerDoingDesignWithExp" time="0.0" />
-  <system-out><![CDATA[{Hela=OODRefCwk.Model.Technician@1963006a, Alan=OODRefCwk.Model.Analyst@7fbe847c}
-{Hela=OODRefCwk.Model.Technician@1963006a, Alan=OODRefCwk.Model.Analyst@7fbe847c}
-{Hela=OODRefCwk.Model.Technician@1963006a, Alan=OODRefCwk.Model.Analyst@7fbe847c}
-{Hela=OODRefCwk.Model.Technician@3d012ddd, Alan=OODRefCwk.Model.Analyst@6f2b958e}
-{Hela=OODRefCwk.Model.Technician@3d012ddd, Alan=OODRefCwk.Model.Analyst@6f2b958e}
-{Hela=OODRefCwk.Model.Technician@3d012ddd, Alan=OODRefCwk.Model.Analyst@6f2b958e}
-{Hela=OODRefCwk.Model.Technician@6504e3b2}
-{Hela=OODRefCwk.Model.Technician@6504e3b2}
-{Hela=OODRefCwk.Model.Technician@6504e3b2}
-{Gita=OODRefCwk.Model.Programmer@626b2d4a}
-{Fela=OODRefCwk.Model.Analyst@1c4af82c}
-{Gita=OODRefCwk.Model.Programmer@cac736f}
-{Bob=OODRefCwk.Model.Technician@156643d4}
-{Ian=OODRefCwk.Model.Analyst@7de26db8}
-{Alan=OODRefCwk.Model.Analyst@36aa7bc2}
-{Bob=OODRefCwk.Model.Technician@182decdb}
-{Hela=OODRefCwk.Model.Technician@4361bd48, Alan=OODRefCwk.Model.Analyst@53bd815b, Gita=OODRefCwk.Model.Programmer@2401f4c3}
-{Alan=OODRefCwk.Model.Analyst@4926097b}
-{Bob=OODRefCwk.Model.Technician@5d22bbb7}
-{Ceri=OODRefCwk.Model.Technician@3830f1c0}
-{Gita=OODRefCwk.Model.Programmer@71dac704}
-{Ela=OODRefCwk.Model.Programmer@5aaa6d82}
-{Alan=OODRefCwk.Model.Analyst@69222c14}
-{Ela=OODRefCwk.Model.Programmer@782830e}
-]]></system-out>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
